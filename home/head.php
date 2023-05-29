@@ -19,33 +19,33 @@ if($logo_data)	$logo_data.= " />";
 $main_link=get_main_link();
 ?>
 
+	<div class="night">
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+	</div>
 
-<div class="night">
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-</div>
-
-<div class="night night2">
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
-	<div class="shooting_star"></div>
+	<div class="night night2">
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+		<div class="shooting_star"></div>
+	</div>
 </div>
 
 <!-- 헤더 영역 -->

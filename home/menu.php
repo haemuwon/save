@@ -55,6 +55,7 @@ $tab_width = 1000; ?>
 				<a href="<?php echo G5_BBS_URL ?>/register.php"><li class="mini-item"><i class="material-icons mini-icon">how_to_reg</i><div class="menu-txt">회원가입</div></li></a><?}?>
 				<?}?>
 				
+        <!--
 				<li class="mini-item"><a href="<?=G5_URL?>/bgm.php?action=play" target="bgm_frame" class="play playy music_btn" onclick="return fn_control_bgm('play')">
 			</a><div class="menu-txt onoff play2"></div></li>
 			<li class="mini-item"><a href="<?=G5_URL?>/bgm.php" target="bgm_frame" class="stop music_btn" onclick="return fn_control_bgm('stop')">
@@ -80,7 +81,7 @@ function fn_control_bgm(state) {
 	}
 }
 bgm_effect = setInterval(set_equalizer, 300);
-</script>
+</script> -->
 </div>
 			
 			<? /**************************************************************
@@ -99,7 +100,7 @@ bgm_effect = setInterval(set_equalizer, 300);
   --menu-point:rgba(158, 168, 255, 0.842);
   --menu-point-trans:rgba(255,255,255,0.4);
   --menu-shadow:rgba(50, 88, 130, 0.32);
-  --menu-background:linear-gradient(to bottom, rgb(169, 225, 255), rgb(255, 218, 241));
+  --menu-background:linear-gradient(to bottom, rgb(27 77 104), rgb(243 162 188));
 }
 
 <? /* 모바일 반응형---- */ ?>

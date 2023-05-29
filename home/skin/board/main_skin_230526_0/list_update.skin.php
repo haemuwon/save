@@ -78,10 +78,12 @@ if($w == '')
 				<select name="theme2" id="theme2" onchange="changeDisign('<?=$list_item[$i]['wr_id']?>', this.name, this.value);">
 					<option value="">---</option>
 						<?=write_option('main_default', $list_item[$i]['theme'], '기본');?>
+						<?=write_option('main_default2', $list_item[$i]['theme'], '기본2');?>
 						<?=write_option('main_empty', $list_item[$i]['theme'], '스타일 없음(투명)');?>
 						<?=write_option('main_glass', $list_item[$i]['theme'], '유리 재질');?>
 						<?=write_option('main_digital', $list_item[$i]['theme'], '디지털');?>
 						<?=write_option('main_gothic', $list_item[$i]['theme'], '고딕');?>
+						<?=write_option('main_gothic2', $list_item[$i]['theme'], '고딕2');?>
 						<?=write_option('main_pola', $list_item[$i]['theme'], '폴라로이드');?>
 						<option value="text">직접 입력</option>
 					</select>

@@ -67,8 +67,8 @@
 	--default-txt-color:#020715; /*폰트 색*/
 	--memo-font:'Pretendard JP';/*메모란 폰트 종류*/
 	--board-icon-font:#020715; /*보드 아이콘 색*/
-	--highlight-start:#8cff32; /*형광펜 시작*/
-	--highlight-end:#fdff32; /*형광펜 끝*/
+	--highlight-start:#e25282; /*형광펜 시작*/
+	--highlight-end:#efa1bb; /*형광펜 끝*/
 	--tweet-max-height:600px; /*트위터 height 최대*/
 }
 
@@ -424,4 +424,76 @@ margin-bottom: 10px;
 @keyframes back{
 	50% {transform:scaleX(0);}
 	100% {transform: scaleX(1);}
+}
+
+
+
+/** Notice Box **/
+.board-notice-mr	{ 
+    display: inline-block;
+    position: relative;
+	box-sizing: border-box;
+	color: #000;
+
+    padding: 15px;
+
+    background: #fff;
+    border: 1px solid #000;
+
+	line-height: 24px;
+	font-size: 12px;
+	font-family: 'galmuri9';
+	text-align: center; 
+
+	filter:drop-shadow(8px 5px 0px #000);
+	transition-duration: .5s;
+}
+@media all and (min-width: 1002px) { 
+	.board-notice-mr	{ 
+		width: 36%; 
+		margin-left: 32%;
+	}
+}
+@media all and (max-width: 1001px) {
+	.board-notice-mr	{ 
+		width: 70%;
+		margin-left: 15%;
+	}
+}
+.board-notice-mr:hover {
+	translate: 6px 3px;
+	filter:drop-shadow(2px 2px 0px #000);
+}
+.board-notice-mr:before {
+	content: '- X';
+	font-size: 12px;
+	width: calc(100% + 2px);
+	height: 15px;
+	line-height:9px;
+	color: #000;
+	text-align:right;
+	padding: 2px;
+	box-sizing:border-box;
+	background: #fff;
+	border: 1px solid #000;
+	position: absolute;
+	top: -15px;
+	left: -1px;
+	transition-duration: .5s;
+}
+.board-notice-mr:hover:before {
+	background: #000;
+	color: #fff;
+}
+.board-notice-mr:after {
+	content:'';
+	position:absolute;
+	background: url(https://cdn.pixabay.com/photo/2012/04/01/12/38/cursor-23229_960_720.png) 100%; 
+	width: 16px;
+	height: 30px;
+	display: block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	right: -10px;
+	bottom: 8px;
 }

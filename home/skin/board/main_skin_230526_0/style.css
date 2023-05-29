@@ -209,7 +209,7 @@ div#edit_window::-webkit-scrollbar-thumb {
   border-radius: 0px;
   border: 1px solid black;
   margin: 3px 5px;
-  background: #6996b1;
+  background: #ffffff;
 }
 .desc {
   padding: 2px 5px;
@@ -233,7 +233,7 @@ div#edit_window::-webkit-scrollbar-thumb {
   margin: 3px 5px;
   height: 30px;
   line-height: 30px;
-  background: #6996b1;
+  background: #ffffff;
 }
 .mainskin--input.sml {
   width: 70px;
@@ -374,8 +374,11 @@ div#edit_window::-webkit-scrollbar-thumb {
   padding: 5px 10px;
   display: flex;
   flex-direction: column;
+  font-family: 'LeferiPoint-SpecialItalicA';
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
 }
 .mainskin--dday--text {
+  
   font-size: 20px;
   line-height: 1em;
 }
@@ -472,13 +475,21 @@ div#edit_window::-webkit-scrollbar-thumb {
 
 /* 테마 */
 /* 추가할 때는 .main_layout.스킨명 으로 작성합니다. */
+/* 추가 후 list_update.skin.php 75번째 줄에서 테마도 등록하기 */
 .mainskin--themehead {
   display: none;
 }
 /* 기본 */
 .main_layout.main_default {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.74), rgb(255 255 255 / 22%));
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.7), rgb(255 255 255 / 10%));
   box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+}
+
+/* 기본 수정 */
+.main_layout.main_default2 {
+  background: linear-gradient(145deg, rgba(1, 24, 36, 0.76), rgb(255 118 156 / 28%));
+  box-shadow: 0px 0px 7px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
 }
 
 /* 유리재질 */
@@ -492,8 +503,9 @@ div#edit_window::-webkit-scrollbar-thumb {
 /* 디지털 */
 .main_layout.main_digital {
   font-family: galmuri7;
-  border: 2px inset;
+  border: 1px inset;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .main_layout.main_digital::before {
@@ -513,7 +525,10 @@ div#edit_window::-webkit-scrollbar-thumb {
   display:block;
   height: 32px;
   width: 100%;
+  
 }
+
+
 
 /* 고딕 */
 .main_layout.main_gothic {
@@ -523,12 +538,24 @@ div#edit_window::-webkit-scrollbar-thumb {
   border-image-repeat: stretch;
 }
 
+
+/* 고딕 수정 */
+.main_layout.main_gothic2 {
+  border-image: url(https://imgur.com/VymWv2H.png);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  border-image-width: 60px;
+  border-image-slice: 100;
+  border-image-repeat: stretch;
+}
+
+
 /* 폴라로이드 */
 .main_layout.main_pola {
   border-width: 10px 10px 45px 10px;
   border-color: white;
   border-style: solid;
-  box-shadow: 0px 0px 5px inset rgba(0, 0, 0, 0.2), 0px 0px 16px -6px #00000061;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
   rotate:-3deg;
 }
 

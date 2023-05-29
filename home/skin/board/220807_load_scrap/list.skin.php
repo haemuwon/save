@@ -22,7 +22,7 @@ $comment_max=$board['bo_comment_max'];
 
 <!-- 자비란 상단 공지 부분 -->
 <? if($board['bo_content_head']) { ?>
-	<div class="board-notice">
+	<div class="board-notice-mr">
 		<?=stripslashes($board['bo_content_head']);?>
 	</div>
 <? } ?>

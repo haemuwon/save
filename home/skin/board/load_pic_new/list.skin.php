@@ -13,7 +13,7 @@ $comment_max=$board['bo_comment_max'];
 ?>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<div id="load_log_board" <?if($board['bo_table_width']>0){?>style="max-width:<?=$board['bo_table_width']?><?=$board['bo_table_width']>100 ? "px":"%"?>;margin:0 auto;"<?}?>>
+<div id="load_log_board" <?if($board['bo_table_width']>0){?>style="min-width:380px; max-width:<?=$board['bo_table_width']?><?=$board['bo_table_width']>100 ? "px":"%"?>;margin:0 auto;"<?}?>>
 
 
 <!-- 자비란 상단 공지 부분 -->

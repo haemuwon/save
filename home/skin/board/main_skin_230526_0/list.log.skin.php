@@ -399,7 +399,7 @@ if($list_item[$i]['wr_direction'] == 'row' && $list_item[$i]['theme'] == 'main_d
 			echo $list_item[$i]['dday1_'].'</div>';
 			echo "<div class='mainskin--dday--day'>";
 			if($d_day1 > 0){
-				echo "+ ";
+				echo "<span style='font-size:18px'>♥ </span>";
 				echo $d_day1.'<span class="mainskin--dday--text2">days</span></div>';
 			} else if ($d_day1 < 0){
 				echo "- ";

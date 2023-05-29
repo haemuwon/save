@@ -90,10 +90,10 @@ for($i=0; $cs = sql_fetch_array($css_sql); $i++) {
 <? // *********테마********* ?>
 
 .main_layout.main_digital {
-	box-shadow: 1px 0px 0px <?=$css['color_default'][0]?>, -1px 0px 0px <?=$css['color_default'][0]?>, 0px 1px 0px <?=$css['color_default'][0]?>, 0px -1px 0px <?=$css['color_default'][0]?>, 4px 5px 0px rgba(0,0,0,0.2);
+	box-shadow: 4px 5px 0px rgba(0,0,0,0.4);
 }
 .main_layout.main_digital::before {
-	background: <?=$css['color_point'][0]?>;
-	border-color: <?=$css['color_point'][0]?>;
-	box-shadow: 0px 1px 0px <?=$css['color_default'][0]?>;
-}
+	background: linear-gradient(to right, rgb(243 162 188), #ffffff);
+	border-color: #22506b;
+	box-shadow: 0px 1px 0px #18394e; 
+} 

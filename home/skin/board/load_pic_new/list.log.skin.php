@@ -193,7 +193,7 @@ if($is_viewer) {
 				<p class="no">
 					
 					<? // 로그 넘버링 출력 ?>
-					<span class="hologram"><?=($list_item['wr_num'] * -1)?>번째 로그</span>
+					<span class="hologram"><?=($list_item['wr_num'] * -1)?>#</span>
 					<? if($list_item['ca_name']){ 
 						// 카테고리 출력
 					?><span data-category="<?=$list_item['ca_name']?>" class="ico-category">| <?=$list_item['ca_name']?></span>

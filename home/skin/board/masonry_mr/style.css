@@ -315,17 +315,20 @@
 	--mr-text1: #000;
 	--mr-text2: #FFF;
 	/* 포인트색 */
-	--mr-point1: #b3cafd; 
-	--mr-point2: #3f74ed; 
-	--mr-point3: #ffaa40; 
+	--mr-point1: #1c4d68; 
+	--mr-point2: #efa1bb; 
+	--mr-point3: #e25282; 
+	--hl-pink: #efa1bb;
+	--hl-pink2: #e25282;
+	--hl-cyan: #4cb1ca;
 	/*   글꼴   */
 	--mr-font1: 'Pretendard-Regular';
 	--mr-font2: 'GongGothicLight';
-	--mr-font3: 'Cafe24Ohsquare';
+	--mr-font3: 'LeferiPoint-SpecialItalicA';
 	--mr-font4: 'KIMM_Bold';
 	--mr-font5: 'PFStardust';
 	--mr-font6: 'InkLipquid';
-	--mr-font7: 'KCC-eunyoung';
+	--mr-font7: 'InkLipquid';
 	--mr-font8: 'ROEHOE-CHAN';
 }
 #body {
@@ -338,9 +341,9 @@
 ::-moz-selection	{ background:var(--mr-point1)!important;color:var(--mr-text1)!important; }
 ::-webkit-selection	{ background:var(--mr-point1)!important;color:var(--mr-text1)!important; }
 
-/* scroll */
+/* scroll 
 *::-webkit-scrollbar-track			{ background-color: #FFF!important; }
-*::-webkit-scrollbar-thumb			{ background: #3f74ed!important; }
+*::-webkit-scrollbar-thumb			{ background: #3f74ed!important; } */
 
 /* highlight */
 .mr-highlight {
@@ -352,7 +355,7 @@
     font-family: var(--mr-font2) !important;
     font-size: 12px;
     color: var(--mr-text1) !important;
-    background-color: var(--mr-point1) !important;
+    background-color: var(--hl-pink) !important;
 }
 .mr-highlight-outline {
 	display: inline-block;
@@ -375,18 +378,18 @@
     font-family: var(--mr-font2) !important;
     font-size: 12px;
     color: var(--mr-text2) !important;
-    background-color: var(--mr-point2) !important;
+    background-color: var(--mr-point3) !important;
 }
 .mr-highlight2-outline {
 	display: inline-block;
     line-height: 16px;
     padding: 0 5px;
     margin: 2px 0;
-	border: 1px solid var(--mr-point2) !important;
+	border: 1px solid var(--mr-point3) !important;
     border-radius: 4px;
     font-family: var(--mr-font2) !important;
     font-size: 12px;
-    color: var(--mr-point2) !important;
+    color: var(--mr-point3) !important;
     background-color: var(--mr-text2) !important;
 }
 .mr-highlight3 {
@@ -421,7 +424,7 @@
 	/*font-weight:bold;*/
 	font-size:12px;
 
-	background: linear-gradient(to right, #ffeebd 0%, #ffe2d7 100%);
+	background: linear-gradient(to right, #ffe38e 0%, #ffd7c8 100%);
 	background-size:100% 40%;
 	background-position: center 100%;
 	background-repeat:no-repeat;
@@ -661,18 +664,15 @@ dl.dl-memo dt label {
     margin-top: 0.1em;
     margin-bottom: 0.1em;
     letter-spacing: -3px;
-    text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    text-stroke-width: 1px;
-    -webkit-text-stroke-width: 1px;
-    text-stroke-color: var(--mr-text1) !important;
-    -webkit-text-stroke-color: var(--mr-text1) !important;
-	text-shadow: 2px 2px var(--mr-point1) !important;
+    text-fill-color: var(--hl-cyan);
+    -webkit-text-fill-color: var(--hl-cyan);
+
 }
 .mr-subtitle {
     font-size: 18px;
-	font-family: var(--mr-font8) !important;
-    color: var(--mr-point2) !important;
+	font-weight: bold;
+	font-family: var(--mr-font7) !important;
+    color: var(--mr-point1) !important;
     position: absolute;
     left: 0;
     width: max-content;
@@ -844,7 +844,7 @@ dl.dl-memo dt label {
 	margin: 2px 0;
 	border-radius:4px;
 
-	font-family: var(--mr-font2) !important;
+	font-family: var(--mr-font1) !important;
 	font-size:11px;
 	font-weight:bold;
 	color: var(--mr-text2) !important;

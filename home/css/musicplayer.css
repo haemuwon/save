@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --music-point: #6e44ad;
+  --music-base: #ffffff;
+  --music-text: #000000;
+}
+
+.music-player .material-icons {
+color: var(--music-point);
+}
+/* 커서 설정 */
+.music-player {
+  cursor: grab;
+}
+.music-player:active {
+  cursor: grabbing;
+}
+.music-player a {
+  cursor: pointer;
+}
+.listmusic {
+  cursor: pointer;
+}
+
+/* 뮤직 플레이어 설정 */
+.music-player {
+  width: 265px;
+    height: 145px;
+    background: var(--music-base);
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: absolute;
+    padding: 7px;
+    left: 22px;
+    top: 22px;
+    box-shadow: 0px 0px 7px rgb(68 90 89 / 25%);
+    border: 1px double var(--music-point);
+    overflow: hidden;
+    transition-property: height;
+    transition-duration: 1s;
+}
+.music-thumb {
+  top: 0px;
+  left: 0px;
+  width:100%;
+  height: 145px;
+  display: block;
+  position: absolute;
+  mask-image: linear-gradient(180deg, black, black, #00000000);
+  -webkit-mask-image: linear-gradient(180deg, black, black, #00000000);
+  background: transparent;
+  pointer-events: none;
+  background-size: 145%;
+    background-position-x: center;
+    background-position-y: center;
+    transition: 1s;
+    transition-property: background-size, height;
+    image-rendering: -webkit-optimize-contrast;
+    background-repeat: no-repeat;
+}
+.music-thumb.active {
+  height:290px;
+  background-size:160%;
+}
+.music-ui {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  transition: 1s;
+}
+#player-infos1,
+#player-infos2 {
+  text-align: center;
+    font-size: 11px;
+  display: inline-block;
+  color: var(--music-text);
+}
+#play-text {
+  margin-top: 55px;
+    display: block;
+    height: 15px;
+    color: var(--music-text);
+}
+.music-ui p {
+  height: 20px;
+}
+#songtitle {
+  height: 20px;
+  color: var(--music-point);
+  width: 70%;
+  overflow: hidden;
+  font-size:15px;
+  font-family:'GmarketSansMedium';
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0px 0px 5px #00000087;
+}
+.music_ctl {
+  text-align: center;
+    margin-top: 2px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+#player-infos {
+  height: 16px;
+}
+.music-list {
+  top: 150px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0px;
+  height:240px;
+  overflow:auto;
+  padding:5px;
+  box-sizing: border-box;
+  transition: 1s;
+}
+.music-list.active {
+  top:230px;
+  height:160px;
+}
+.music-ui.active {
+  top: 90px;
+}
+.listmusic {
+    display: block;
+    padding: 3px;
+    margin: 4px;
+    border-radius: 5px;
+    color: var(--music-text);
+}
+.listmusic.active {
+  background: var(--music-point);
+  color: var(--music-base);
+}
+
+/* 재생 위치 바 설정 */
+input[type='range'] {
+  background:transparent;
+  }
+  
+  input[type='range']:focus {
+    outline: none;
+  }
+  /* Primero quitamos el estilo por defecto que tiene el input */
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  /* Estilo del thumb para webkit */
+  input[type=range]::-webkit-slider-thumb {
+    background-color: var(--music-point);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--music-base);
+    border-radius: 100%;
+    margin: -3px;
+  }
+  /* Estilo del thumb para moz */
+  input[type=range]::-moz-range-thumb {
+    background-color: var(--music-point);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--music-base);
+    border-radius: 100%;
+    margin: -3px;
+  }
+  /* Estilo para el thum para ms */
+  input[type=range]::-ms-thumb {
+    background-color: var(--music-point);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--music-base);
+    border-radius: 100%;
+    margin: -3px;
+  }
+  /* El estilo del track para webkit */
+  input[type=range]::-webkit-slider-runnable-track {
+    background: var(--music-point);
+    height: 3px;
+    border-radius:2px;
+    margin:0px 7px;
+    filter: drop-shadow(0px 0px 2px rgba(6, 17, 29, 0.1))
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  /* Estilo de track para mox */
+  input[type=range]::-moz-range-track {
+    background-color: gray;
+    height: 3px;
+  }
+  /* Estilo del track para ms */
+  input[type=range]::-ms-track {
+    background-color: gray;
+    height: 3px;
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    background-color:gray;
+  }
+  
+  input[type=range]::-ms-fill-upper {
+    background-color: gray;
+  } 
+  /* 볼륨 바 */
+  #volume-window {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 19px;
+    height: 94px;
+    background: var(--music-base);
+    border-radius: 5px;
+    z-index: 2;
+    top: 7px;
+    right: 13px;
+  }
+  #YouTube-player-volume {
+    rotate: -90deg;
+    left: 0;
+    top: 0;
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    width: 95px;
+    padding: 9px 0px;
+  }
+

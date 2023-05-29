@@ -10,7 +10,7 @@
 
 /* 새글 스킨 (latest) */
 .main_lt {
-    font-family: ChosunGu;
+    font-family: LeferiPoint-SpecialItalicA;
 }
 
 /* 메인 최신글 스킨 (다른 스킨 이용 시엔 skin>latest>해당 스킨 부분을 수정해주세요) */
@@ -23,9 +23,11 @@
     font-weight: bold;
     margin: 11px 3px;
     position: relative;
+    filter:drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.4));
 }
 .main_lt_ma {
   font-weight: bold;
+  font-family: Chosunilbo_myungjo;
 }
 .main_lt_mas {
   display: flex;
@@ -39,6 +41,7 @@
   left: 0px;
   margin: 6px 0px;
   padding: 0px 10px;
+  background: rgba(0, 0, 0, 0.4) !important;
 }
 .main_lt_mas a {
     cursor: pointer !important;
@@ -57,6 +60,7 @@
 }
 .main_lt_mas:hover {
     left: 10px;
+    background: rgba(255, 255, 255, 1) !important;
 }
 .main_lt_mas:hover .main_lt_name {
     opacity: 1;

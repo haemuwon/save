@@ -77,10 +77,19 @@ if (defined('G5_IS_ADMIN')) {
 }
 ?>
 
+
+<link rel="stylesheet" href="<?php echo G5_CSS_URL?>/textggu.css" type="text/css">
+<script src="<?php echo G5_JS_URL ?>/textggu.js"></script>
+<link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css'>
+<!-- 마지막 줄은 galmuri 폰트를 사용하지 않거나 이미 사용 중이라면 삭제해주세요! -->
+
 <? if($config['cf_favicon']) { ?>
 <link rel="shortcut icon" href="<?=$config['cf_favicon']?>" type="image/x-icon">
 <link rel="icon" href="<?=$config['cf_favicon']?>" type="image/x-icon">
 <? } ?>
+
+<!-- 툴팁 -->
+<link rel="stylesheet" href="<?php echo G5_CSS_URL?>/hint.css">
 
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>

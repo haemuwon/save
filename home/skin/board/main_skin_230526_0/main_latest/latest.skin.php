@@ -18,12 +18,22 @@ add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 
         <li>
             <?php
             
-            if ($board[$i]['wr_is_comment'])
-                // echo '<img src="'.G5_SKIN_URL.'/board/'.$parent.'/main_latest/img/icon_reply.gif">';
-                echo '<i class="material-icons">textsms</i>';
-            else
-                // echo '<img src="'.G5_SKIN_URL.'/board/'.$parent.'/main_latest/img/icon_new.gif">';
-                echo '<i class="material-icons">create</i>';
+            if ($board[$i]['bo_subject']=='other' && !$board[$i]['wr_is_comment']) {
+                // 게시판 이름이 'other'이고 댓글이 아닐 때
+                echo "  <i class='material-icons-outlined'>mail</i>";
+                    
+            }else if($board[$i]['bo_subject']=='other') {
+                // 게시판 이름이 'other'이고 댓글일 때
+                echo "  <i class='material-icons-outlined'>drafts</i>";
+                    
+            }else if ($board[$i]['wr_is_comment']) {
+                // other X 댓글O
+                echo "  <i class='material-icons'>subdirectory_arrow_right</i> ";
+                    
+            }else {
+                // other X 댓글X (로그작성)
+                echo "  <i class='material-icons'>notes</i> ";
+            }
             
 
             echo $board[$i]['bo_subject'];
