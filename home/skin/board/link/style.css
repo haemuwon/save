@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/*목록*/
+
+.board-skin-basic.theme-box{
+position:relative;
+box-sizing:border-box;
+padding:50px 10px;
+}
+
+.bo_list { width: 100%;} 
+.bo_list {position:relative; text-align:center; }
+.bo_list h2 { padding:50px 0 15px; text-align:center; font-size:15px;} /*카테고리 - 분류별 정렬시 사용*/
+
+.bo_list li.bo-list{
+	display:inline-flex;
+	flex-direction:column;
+	align-items:center; 
+	position:relative;
+	padding:2px;/*각 배너간 여백*/
+	text-align: center;   
+	}
+.bo_list li a.link-banner {display:block;overflow:hidden;}
+.bo_list li a.link-banner strong{display:block;word-break:keep-all;white-space:nowrap;padding:0 5px;line-height:30px;}/*배너가 없을 경우 대체텍스트(링크 제목)*/
+.bo_list li .link-desc {text-align:center;} /*배너 하단 글씨 영역*/
+.bo_list li .link-desc .name {display:none;} /*링크제목 영역 노출을 원할 경우 해당 라인 삭제 혹은 주석처리*/
+.bo_list li .link-desc .options {opacity:0.6;}
+
+/*글쓰기*/
+
+.board-write	{  max-width:800px; padding: 0 10px; margin:30px auto; }
+.board-write > dl {position:relative;}
+.board-write > dl > dt { width:100px;position:absolute;line-height:32px;text-align:center; }
+.board-write > dl > dd { width:100%;margin-left:0;padding-left:110px;box-sizing:border-box;line-height:32px;}
+.board-write input.frm_input.full	{ width: 100%; display:block;margin:1px 0;}
+.board-write .frm_input.small { width:50px;}
+.board-write .frm_info{line-height:140%;}
+.board-write .write-notice	{
+	padding: 20px 10px 10px;
+	font-size: 11px;
+}
+
+.board-write .files {position:relative;}
+.board-write .files	{ margin-top: 20px;}  
+.board-write .files .sub {position:relative;padding-left:65px; box-sizing:border-box;} 
+.board-write .files span.sub_tit{position:absolute;left:0;display:block;width:65px;} 
+.board-write .files .frm_info{padding-top:5px;}
+.board-write .files .label-right {position:absolute;top:0;right:0;z-index:2;}
+
+
+/*본문*/
+
+.board-viewer	{
+	width:100%;
+	display: block;
+	position: relative; 
+	box-sizing:border-box; 
+}
+.board-viewer:after{content:"";display:block;clear:both;}
+ 
+.board-viewer .contents	{ 
+	display: block;
+	position: relative; 
+	padding: 0 15px; 
+	box-sizing:border-box;
+}  
+#bo_vc_w {clear:both;} 
+#bo_v_con {padding:20px 0;}  
+#bo_v_bot	{ padding: 20px 0; overflow: hidden; }
+.bo_v_nb	{ float: left; }
+.bo_v_com	{ float: right; }

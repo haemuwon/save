@@ -1,0 +1,275 @@
+/* modal css */
+body .modal {
+  max-width: 800px;
+  min-height: 200px;
+  padding: 20px;
+  border-radius:var(--border-radius);
+}
+
+
+
+.modal * {
+  outline-color: var(--point-color1);
+}
+
+.modal *::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+}
+.modal *::-webkit-scrollbar-thumb {
+  background: var(--point-color2);
+  -webkit-box-shadow: none;
+}
+.modal .ui-btn {
+  color: var(--base-color);
+  background-color: var(--point-color2) !important;
+  border: 0 !important;
+}
+.modal .ui-btn.point {
+  background-color: var(--point-color1) !important;
+  line-height: 1.9rem;
+}
+
+.modal a.close-modal {
+  background-color: var(--point-color1);
+  background-image: none !important;
+  border-radius: 50%;
+  left: -12.5px;
+}
+
+.modal a.close-modal::before {
+  content: "X";
+  color: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-indent: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 33px;
+  font-family: var(--point-font);
+}
+
+/*텍꾸용*/
+.textggu-ex {
+  color:var(--text-color);
+  position:fixed;
+  background:white;
+  align-items: flex-start;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+.textggu-ex > div {
+  display:flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.modal .theme-form > div.textggu-ex.off
+{
+	display:none;
+}
+
+/* model 내 글 작성 css */
+.modal #body {
+  padding: 10px;
+  max-height: 290px;
+  margin-left: 0;
+}
+.modal * {
+  font-family: "S-CoreDream-4Regular";
+}
+
+.modal hr.padding {
+  height: 0;
+}
+
+.modal .theme-form > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 5px 0;
+}
+.modal .theme-form #wr_subject {
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin: 0 0 0 10px;
+}
+.modal .theme-form #wr_subject::placeholder,
+.modal .theme-form input[type="text"]::placeholder
+{
+  color: #888;
+  opacity: 0.6;
+}
+.modal .theme-form #wr_content {
+  font-size: 1.1rem;
+  height: 150px !important;
+  border: 0px;
+  color: var(--text-color);
+  background-color: white;
+}
+
+.modal .wr_header > div {
+  margin-right: 8px;
+}
+
+.modal .wr_header > input {
+  margin: 0 2px 0 5px;
+}
+
+.modal .wr_header label,
+.modal .wr_header span,
+.modal .wr_header input,
+.modal label.wr_label
+{
+  color: var(--text-color);
+  background-color: white;
+  border: 0;
+}
+
+.modal .wr_header input {
+  border-radius: 0;
+  border-bottom: 1px solid #888 !important;
+}
+
+.modal .wr_header input[type="checkbox"] {
+  display: none;
+}
+
+.modal .wr_header .hide {
+  display: none;
+}
+
+.modal .wr_header label {
+  margin: 0 5px;
+}
+
+.modal .wr_header input[type="checkbox"]:checked + label::before {
+  content: "✔";
+  color: var(--point-color1);
+  font-size: 1.1rem;
+  text-align: center;
+}
+.modal .wr_file {
+  border: 0px;
+  display: flex;
+  align-items: center;
+  width:100%;
+}
+input[type="file"] {
+	display:none;
+}
+.wr_file label.file_btn,
+.wr_file label.cfile_btn,
+label[for="review_cover"]
+{
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  vertical-align: middle;
+  background-color: #999999;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.wr_file label.file_btn{
+  width:160px;
+}
+
+.wr_file label.cfile_btn {
+  width:80px;
+}
+.wr_file .upload-file-name {
+  display: inline-block;
+  padding: 0 10px;
+  vertical-align: middle;
+  border: 1px solid #dddddd;
+  color: #999999;
+}
+
+.wr_file .div_img,
+.wr_file .upload_file {
+  max-width: 100%;
+  display: grid;
+  grid-auto-rows: minmax(auto, 30px);
+  grid-auto-flow: column;
+}
+.wr_file .div_img .img,
+.wr_file .upload_file .img {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  margin: 0 5px;
+  position: relative;
+  overflow:hidden;
+}
+
+.wr_file .div_img .img.selected {
+  background-color: gray;
+  opacity: 0.8;
+}
+.wr_file .div_img .img.selected::after {
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "삭제";
+  color: white;
+}
+.modal .wr_footer div:nth-child(2) {
+  margin-left: auto;
+}
+
+#password_box.modal {
+  position: relative;
+  margin: 0;
+  width: 400px;
+  height: 200px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+#password_box.modal > * {
+  margin: 5px 0;
+}
+
+#password_box.modal .theme-box {
+  color: var(--text-color);
+  background-color: transparent;
+}
+#password_box.modal .pass-form form {
+  display: flex;
+  flex-flow: row;
+  flex-grow: 1;
+  margin-top: 10px;
+}
+#password_box.modal .pass-form form fieldset {
+  margin: 0 5px;
+}
+#password_box.modal .pass-form input[type="password"] {
+  border-width: 0 !important;
+  border-bottom: 1px solid var(--point-color1) !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+}
+#password_box.modal div:nth-child(3) {
+  padding: 0;
+}
+@media all and (max-width: 785px) {
+
+}
+@media all and (max-width: 580px) {
+
+}

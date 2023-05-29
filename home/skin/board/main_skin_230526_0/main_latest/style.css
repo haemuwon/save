@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* SIR 지운아빠 */
+
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 새글 스킨 (latest) */
+.main_lt {
+    font-family: ChosunGu;
+}
+
+/* 메인 최신글 스킨 (다른 스킨 이용 시엔 skin>latest>해당 스킨 부분을 수정해주세요) */
+
+.main_lt {
+  width: 100%;
+}
+.main_lt_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 11px 3px;
+    position: relative;
+}
+.main_lt_ma {
+  font-weight: bold;
+}
+.main_lt_mas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 25px;
+  position: relative;
+  transition-duration: 0.5s;
+  left: 0px;
+  margin: 6px 0px;
+  padding: 0px 10px;
+}
+.main_lt_mas a {
+    cursor: pointer !important;
+}
+.main_lt_ma li {
+  display: flex;
+  align-items: center;
+}
+.main_lt_ma img {
+    margin-right: 5px;
+}
+.main_lt_name {
+    opacity: 0;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+.main_lt_mas:hover {
+    left: 10px;
+}
+.main_lt_mas:hover .main_lt_name {
+    opacity: 1;
+}
+.main_lt_ma .material-icons {
+  font-size: 16px;
+  margin: 0px 4px;
+}

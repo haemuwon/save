@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+
+/** 공지박스 **/
+.board-notice	{ max-width: 430px; padding: 20px; margin: 20px auto 30px; text-align: center;}
+ 
+
+/* 리스트 */
+#page_board_content {margin:0 auto;}
+.adm-box { margin-bottom:5px;text-align:right;margin-right:5px;}
+.stamp-list .no-data { text-align: center; padding: 40px 0; } 
+.stamp-area .control { position:absolute; right:15px;top:15px;font-size:12px;}
+.stamp-area .control a{display:inline-block;width:25px;height:25px;line-height:23px;padding:0;text-align:center;vertical-align:middle;}
+.stamp-area .empty {padding: 30px 0;text-align:center;}
+.stamp-area .complete {position:absolute;top:15px;left:15px;}
+.stamp-area .complete span{line-height:26px;}
+
+.stamp-list li {padding: 15px 0;} /* 스탬프 판 간 여백 */
+.stamp-area.theme-box	{padding:30px;} /* 스탬프 판 영역 */
+.stamp-area h2 {padding:10px 0 20px;line-height:100%;text-align:center; font-size:24px;} /* 제목 */
+.stamp-area .date { text-align:center; opacity:0.6;padding:0 0 15px; } /* 기간 */
+
+.stamp-content .con {margin:0 auto;padding:30px 0;} /* 스탬프 이미지 출력 영역 */
+.stamp-content .con p {position:relative;display:inline-block;overflow:hidden;vertical-align:middle;text-align:center;}
+.stamp-content .con p a {display:block;}
+.stamp-content .con p .num {display:none;position:absolute;top:2px;left:2px;font-size:12px;line-height:1;} /* 넘버링 */
+
+
+.stamp-area .bo_fx {padding:0 15px;} 
+.stamp-area .bo_fx:after{content:"";display:block;width:100%;clear:both;}
+.stamp-area .reward-box{font-size:15px; float:right; } /* 보상 영역 */
+.stamp-area .last-date { display:none; font-size:12px; float:left;} /* 마지막 스탬프 날짜 */
+.stamp-area .reward{display:inline-block;}
+.stamp-area .reward span {display:inline-block;padding:0 10px;}
+.stamp-area .reward hr.line {margin:5px 0;}
+ 
+
+
+/*글쓰기*/
+ 
+.board-write	{  padding: 0 10px; }
+
+.board-write h3	{
+	font-size: 26px;
+	text-align: center;
+	padding: 30px 0 20px;
+} 
+.board-write .write-notice	{
+	padding: 10px;
+	font-size: 11px;
+}
+.board-write > dl {position:relative;}
+.board-write > dl > dt { width:75px;position:absolute;line-height:32px;font-weight:bold;text-align:center; }
+.board-write > dl > dd { width:100%;margin-left:0;padding-left:85px;box-sizing:border-box;line-height:32px;}
+.board-write input.frm_input.full	{ width: 100%; display:block;margin:1px 0;}
+
+
+@media all and (max-width: 500px) {
+	.stamp-area.theme-box {padding:15px;}
+}

@@ -1,0 +1,491 @@
+:root {
+  /*아보카도 관리자 설정과의 색상충돌 방지*/
+  --list-color: transparent;
+  --list-item-color: transparent;
+
+  /*색상 설정*/
+  --text-color: #1d1c1f; /*글자색*/
+  --sub-text-color: #888; /*검색필드색, 날짜색*/
+
+  /*게시글 배경색, 리플 배경색, 버튼 글자색*/
+  --base-color: #fff;
+
+  /*작성버튼 배경색, R/X/M 버튼 마우스 오버 색, 현재페이지 배경색, 하이퍼링크 색*/
+  --point-color1: #ffb6de;
+  /*수정버튼 배경색, 페이지 배경색, 리플막대 배경색, 작성창 스크롤 색*/
+  --point-color2: #b2b1ffad;
+
+  /* 게시글 그림자 */
+  --shadow: rgba(36, 32, 32, 0.2);
+
+  /*해시태그 설정*/
+  --article-hash: #fff;
+  --article-hash-bg: var(--point-color1);
+  --hash-font: "S-CoreDream-5Medium";
+
+  /*폰트 설정*/
+  --point-font: "GmarketSansLight"; /*강조 폰트*/
+
+  /*모서리 설정*/
+  --border-radius:15px;
+}
+
+.board-list .div_info .div_content a.blurtext, a.blur-txt {color:CurrentColor;}
+
+.article {
+  border-radius: var(--border-radius) !important;
+}
+::selection {
+  background: var(--point-color2) !important;
+}
+
+.article-thumb {
+  position: relative;
+  line-height: 64px;
+  box-shadow: inset 0px 1px 2px var(--shadow);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  width: 200px;
+  background:white;
+}
+
+.article-thumb > div
+{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+
+}
+
+.article-tthumbnail {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image: url(./img/holo.jpg);
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-name: fluid;
+  background-size: 500%;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+
+.article-thumb .hologram {
+  margin: 0px 0px 0px 66px;
+  letter-spacing: -0.9px;
+  display: inline-block;
+  font-family: var(--point-font);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.article-info {
+  position: relative;
+  background-color: var(--base-color) !important;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  width: 200px;
+}
+.article-info .hologram {
+  letter-spacing: -0.9px;
+
+  font-family: var(--point-font);
+  font-style: normal;
+  font-weight: bold;
+
+}
+
+span.date {
+  font-weight: normal;
+  opacity: 0.7;
+  padding: 0 5px;
+  float: right;
+}
+
+/*강조 효과들*/
+.holoback {
+  background-image: url(./img/holo.jpg) !important;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-name: fluid;
+  background-size: 500%;
+}
+
+@keyframes fluid {
+  from {
+    background-position: top;
+  }
+
+  to {
+    background-position: bottom;
+  }
+}
+.hologram {
+  background-image: url(./img/holo.jpg) !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-name: fluid;
+  background-size: 500%;
+  position: relative;
+  text-shadow: none;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
+}
+
+.bottom_menu {
+  height: 50px;
+}
+.bottom_menu div {
+  padding: 0 10px;
+}
+.bottom_menu a {
+  margin: 8px !important;
+}
+.bottom_menu .del {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin-left: 10px;
+  background: #000;
+  color: white;
+  transform: rotate(45deg);
+  float: right;
+  margin: 16px 7px 0px 5px;
+  font-weight: bold;
+}
+.bottom_menu .del:hover {
+  color: var(--point-color1);
+  background: white;
+}
+
+.bottom_menu .del:before {
+  content: "X";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 17px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 11px;
+  transform: rotate(-45deg);
+}
+
+.bottom_menu .mod {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 16px 5px 0px 5px;
+  background: #000;
+  color: white;
+  transform: rotate(45deg);
+  float: right;
+  font-weight: bold;
+}
+
+.bottom_menu .mod:before {
+  content: "M";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 17px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 11px;
+  transform: rotate(-45deg);
+}
+.bottom_menu .mod:hover {
+  color: var(--point-color1);
+  background: white;
+}
+
+.bottom_menu .re {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 16px 5px 0px 5px;
+  background: #000;
+  color: white;
+  transform: rotate(45deg);
+  float: right;
+  font-weight: bold;
+}
+
+.bottom_menu .re:before {
+  content: "R";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 17px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 11px;
+  transform: rotate(-45deg);
+}
+.bottom_menu .re:hover {
+  color: var(--point-color1);
+  background: white;
+}
+
+.bottom_menu .write {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 16px 5px 0px 5px;
+  background: #000;
+  color: white;
+  transform: rotate(45deg);
+  float: right;
+  font-weight: bold;
+}
+
+.bottom_menu .write:before {
+  content: "W";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 17px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 11px;
+  transform: rotate(-45deg);
+}
+.bottom_menu .write:hover {
+  color: var(--point-color1);
+  background: white;
+}
+
+.bottom_menu .list {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 16px 5px 0px 5px;
+  background: #000;
+  color: white;
+  transform: rotate(45deg);
+  float: right;
+  font-weight: bold;
+}
+
+.bottom_menu .list:before {
+  content: "L";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 17px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 11px;
+  transform: rotate(-45deg);
+}
+.bottom_menu .list:hover {
+  color: var(--point-color1);
+  background: white;
+}
+
+/*해시태그 디자인*/
+
+.link_hash_tag {
+  font-family: var(--hash-font);
+  font-size: 11px;
+  position: relative;
+  /* font-weight:bold; */
+  margin-left: 7px;
+  padding: 0px 5px;
+  color: var(--article-hash);
+  background-color: var(--article-hash-bg);
+  border-radius: 0px 3px 3px 0px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.3));
+  transition-duration: 0.2s;
+  height: 16px;
+  display: inline-block;
+  line-height:16px;
+}
+
+.link_hash_tag:before {
+  content: "";
+  width: 4px;
+  position: absolute;
+  height: 4px;
+  left: -2px;
+  top: 6px;
+  background: var(--article-hash);
+  color: var(--article-hash);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.link_hash_tag:after {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-right: 5px solid var(--article-hash-bg);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  transition-duration: 0.2s;
+}
+
+.link_hash_tag:hover {
+  color: var(--article-hash-bg);
+  background-color: var(--article-hash);
+  filter: drop-shadow(0px 0px 1px var(--article-hash-bg));
+}
+
+.link_hash_tag:hover:after {
+  border-right-color: var(--article-hash);
+}
+
+.co-footer {
+  line-height: 20px;
+  padding-right: 17px;
+  padding-bottom: 7px;
+}
+.co-footer:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.co-footer .re,
+.co-footer .del,
+.co-footer .mod {
+  background: var(--point-color1);
+  color: var(--base-color);
+}
+.co-footer .re:hover,
+.co-footer .del:hover,
+.co-footer .mod:hover {
+  background: var(--base-color);
+  color: var(--point-color1);
+}
+
+.co-footer .del {
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin-left: 7px;
+  margin-bottom: 8px;
+  transform: rotate(45deg);
+}
+.co-footer .del:before {
+  content: "X";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 13px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+}
+.co-footer .mod {
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin-left: 7px;
+  margin-bottom: 8px;
+  transform: rotate(45deg);
+}
+.co-footer .mod:before {
+  content: "M";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 13px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+}
+.co-footer .re {
+  display: inline-block;
+  float: right;
+  vertical-align: middle;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  overflow: hidden;
+  text-indent: -999px;
+  margin-left: 7px;
+  margin-bottom: 8px;
+  transform: rotate(45deg);
+}
+.co-footer .re:before {
+  content: "R";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 13px;
+  text-indent: 0;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  transform: rotate(-45deg);
+}

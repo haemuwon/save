@@ -1,0 +1,64 @@
+@charset "utf-8";
+ 
+
+#no_design_main	{
+	position: relative;
+	padding: 20px 0;
+}
+#no_design_main:after	{
+	content: "";
+	display: block;
+	position: relative;
+	clear: both;
+}
+
+#main_visual_box	{ 
+	min-height: 100px;
+	background: #000;
+	margin-bottom: 20px;
+}
+
+#main_twitter_box	{
+	position: relative;
+	width: 32%;
+	height: 260px;
+	float: left;
+	margin-bottom: 20px;
+}
+.twitter	{ max-height: 100%; }
+
+#main_image_box	{
+	position: relative;
+	width: 32%;
+	margin-left: 2%;
+	margin-right: 2%;
+	height: 260px;
+	text-align: center;
+	line-height: 260px;
+	float: left;
+	margin-bottom: 20px;
+}
+
+#main_side_box	{
+	position: relative;
+	width: 32%;
+	height: 260px;
+	float: right;
+	margin-bottom: 20px;
+}
+
+#main_login_box	{ margin-bottom: 20px; }
+#main_banner_box	{
+	padding: 20px;
+	height: 130px;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+
+#main_copyright_box	{
+	display: block;
+	position: relative;
+	clear: both;
+	text-align: center;
+}

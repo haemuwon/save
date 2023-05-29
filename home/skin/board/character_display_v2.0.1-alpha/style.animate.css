@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+:root {
+    --animation-duration-short: .4s;
+    --animation-duration-medium: .8s;
+    --animation-duration-long: 1.2s;
+}
+
+.animate-box {
+    overflow: hidden;
+}
+
+/* for entrance animated elements */
+.view__background__container.on {
+    animation-duration: 2s;
+    animation-name: kenburns-bottom;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.view__body__container-closet {
+    animation-fill-mode: forwards;
+}
+
+.article-thumb__background,
+.article-thumb__container,
+.article-mini__container,
+.view__body__area-content,
+.view__body__area-edit,
+.article-emblem__container,
+.view__body__area-visual__container,
+.article-profile,
+.article-status,
+.article-status__list__item__name,
+.article-status__list__item__value,
+.article-status__list__item__value--big,
+.nav-content__item,
+.article-closet__list__item {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.view__header__text,
+.article-class__top__text,
+.article-class__bottom__text,
+.article-codename__main__text,
+.article-codename__rubi__text,
+.article-codename__title__text,
+.article-summary__text,
+.article-content__container > *,
+.article-content__container--edit > *,
+.nav-btn__item__container,
+.article-voice__arrow-container,
+.article-voice__text,
+.article-profile .animate-onload {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    transition: color var(--animation-duration-long) 1s;
+}
+
+/* Time functioning */
+.view__body__area-visual__container.on {
+    animation-duration: var(--animation-duration-medium);
+    animation-timing-function: ease-out;
+}
+
+.view__body__area-content.on,
+.view__body__container-abstract.on,
+.view__body__container-closet.on,
+.view__body__container-status.on,
+.article-profile,
+.article-profile .animate-onload.on,
+.article-closet.on,
+.article-status,
+.article-status__list__item__name,
+.article-status__list__item__value,
+.article-status__list__item__value--big,
+.article-emblem__container.on,
+.article-thumb.on .article-thumb__background,
+.article-thumb.on .article-thumb__container,
+.article-mini__container.on,
+.nav-btn__item__container.on,
+.nav-content__item.on,
+.article-voice__arrow-container.on,
+.article-voice__text.on,
+.view__body__container-profile.on {
+    animation-duration: var(--animation-duration-long);
+    animation-timing-function: ease-out;
+}
+
+.article-content__container > .on,
+.article-content__container--edit > .on,
+.article-codename__main__text.on,
+.article-codename__rubi__text.on,
+.article-codename__title__text.on,
+.article-summary__text.on,
+.article-class__top__text.on,
+.article-class__bottom__text.on,
+.article-closet__list__item.on,
+.view__body__area-edit.on,
+.view__body__area-edit.off,
+.view__body__area-content.off {
+    animation-duration: var(--animation-duration-medium);
+    animation-timing-function: ease-out;
+}
+
+.view__header__text,
+.article-content__container > *,
+.article-content__container--edit > *,
+.view__body__container-profile.off,
+.article-voice.off,
+.view__body__container-abstract.off,
+.view__body__container-status.off,
+.view__body__container-closet.off {
+    animation-duration: var(--animation-duration-short);
+    animation-timing-function: ease-out;
+}
+
+/* Motion functioning */
+.view__body__container-abstract.on {
+    animation-name: fade-in-top;
+}
+
+.view__body__container-closet.on {
+    animation-name: fade-in-right;
+}
+
+.view__body__area-content.on {
+    z-index: 9;
+    animation-name: slide-in-left;
+    transition: z-index 0s;
+}
+
+.view__body__area-edit.on {
+    z-index: 10;
+    animation-name: slide-in-top;
+    transition: z-index 0s;
+}
+
+.article-emblem__container.on {
+    animation-name: fade-in;
+}
+
+.article-closet__list__item.on,
+.article-content__container > .on,
+.article-content__container--edit > .on,
+.nav-content__item.on {
+    animation-name: fade-in-bottom;
+}
+
+.article-summary__text.on,
+.view__body__container-profile .on,
+.article-profile .animate-onload.on {
+    /* animation-name: slide-in-left; */
+    animation-name: fade-in;
+}
+
+.article-profile.on,
+.article-status.on {
+    animation-name: slide-in-left;
+}
+
+.article-status__list__item__name.on,
+.article-status__list__item__value.on,
+.article-status__list__item__value--big.on,
+.article-codename__main__text.on,
+.article-codename__rubi__text.on,
+.article-codename__title__text.on {
+    animation-name: slide-in-top;
+}
+
+.nav-btn__item__container.on,
+.article-voice__arrow-container.on,
+.article-voice__text.on {
+    animation-name: fade-in;
+}
+
+.article-class__top__text.on {
+    animation-name: fade-in-top;
+}
+
+.article-class__bottom__text.on {
+    animation-name: fade-in-bottom;
+}
+
+.view__body__area-visual__container.on {
+    animation-name: slide-in-bottom;
+}
+
+.animate-toggle {
+    animation-fill-mode: forwards;
+}
+
+.view__body__area-edit.off
+.view__body__area-content.off {
+    animation-name: fade-out;
+    z-index: -99;
+}
+
+.animate-toggle.off {
+    animation-name: fade-out;
+    z-index: -99;
+}
+
+.view__body__container-status.on,
+.article-voice.on,
+.view__body__container-profile.on {
+    animation-name: slide-in-left;
+}
+
+.view__header__text.on {
+    animation-name: slide-in-top;
+}
+
+/* ETC */
+.article-cloth__thumb::before {
+    background: var(--background-light-3);
+    background-position: initial;
+    background-size: initial;
+}
+
+.article-closet__list__item:hover .article-cloth__thumb::before {
+    background: linear-gradient(to right, var(--background-light-3) 20%, var(--background-light-3) 40%, #fff 50%, #fff 55%, var(--background-light-3) 70%, var(--background-light-3) 100%);
+    background-size: 200% auto;
+    animation: shine 2s linear;
+}
+
+.article-class__slash {
+    width: 0;
+    transform: rotate(0) rotateX(90deg);
+    transition: var(--animation-duration-medium) ease-out;
+}
+
+.article-class__slash.on {
+    width: calc(1.2*var(--class-box-unit));
+    transform: rotate(-45deg) rotateX(0);
+}
+
+.view__body__area-visual.slide {
+    transform: translateX(calc(var(--col)));
+    transition: var(--animation-duration-short) ease-out;
+}
+
+.view__header__text {
+    animation-duration: var(--animation-duration-medium);
+    animation-name: flip-in-hor-bottom;
+}
+
+.article-thumb.on .article-thumb__background {
+    animation-name: flip-in-hor-bottom;
+    animation-duration: var(--animation-duration-medium);
+}
+
+.article-thumb.on .article-thumb__container {
+    animation-name: flip-in-hor-bottom;
+    animation-duration: var(--animation-duration-medium);
+    animation-delay: var(--animation-duration-medium);
+}
+
+.article-mini__container.on {
+    animation-name: flip-in-hor-bottom;
+}
+
+/* .article-codename__divider--top.on {
+    width: var(--gutter);
+    transition: 1s ease-out;
+    background-color: var(--bg-color) !important;
+} */

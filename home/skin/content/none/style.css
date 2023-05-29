@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+/* 내용관리 */
+.ctt_admin {position: absolute; top: 10px; right: 10px; }
+#body {position:relative;margin:0;}
+#body .fix-layout {max-width:100%;position:static;}
+.co_container,.co_content{height:100%;}
+.sound_only.not {display:block;}

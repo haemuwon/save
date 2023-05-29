@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+.animate-box {
+    overflow: hidden;
+}
+
+/* Active slide CSS */
+.list__grid__item {
+    opacity: .3;
+    filter: saturate(0);
+    transition: transform 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 1s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+}
+
+.list__grid__item:hover,
+.list__grid__item.glide__slide--active {
+    opacity: 1;
+    -webkit-filter: saturate(1);
+    filter: saturate(1);
+
+}
+
+.article-card {
+    padding-top: 16px;
+}
+
+.list__grid__item:hover .article-card,
+.glide__slide--active .article-card {
+    padding: 0;
+}
+
+.article-card__body::before {
+    background-color: var(--background-medium);
+}
+
+.list__grid__item:hover .article-card__body::before,
+.glide__slide--active .article-card__body::before {
+    background: linear-gradient(to right, var(--background-medium) 20%, var(--background-medium) 40%, var(--background-light) 50%, var(--background-light) 55%, var(--background-medium) 70%, var(--background-medium) 100%);
+    background-size: 200% auto;
+    animation: shine 2s linear;
+}
+
+/* Animation CSS */
+.article-card__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 99;
+    background-color: var(--contrast-color-alpha6);
+}
+
+.article-card__header,
+.article-card__body,
+.article-card__container,
+.article-card__content::before,
+.article-card__content__codename__text,
+.article-card__content__rubi__text,
+.article-card__background__cover,
+.article-card__content__emblem,
+.article-class__top__text,
+.article-card__footer {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.list__grid__item.on .article-card__header {
+    animation-delay: .1s;
+    animation-duration: 1.2s;
+    animation-name: flash-in-bottom;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.list__grid__item.on .article-card__body {
+    animation-duration: 2s;
+    animation-name: fade-in-bottom;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.list__grid__item.on .article-card__container {
+    animation-delay: .3s;
+    animation-duration: 2s;
+    animation-name: flip-in-ver-right;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.list__grid__item:hover .article-class__top__text,
+.glide__slide--active .article-class__top__text {
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+    animation-delay: .6s;
+}
+
+.list__grid__item:hover .article-class__top__text,
+.glide__slide--active .article-class__top__text {
+    animation-name: fade-in-top;
+}
+
+/* .glide-slide-box:hover .item-bg-class>.class-box-bottom,
+.glide__slide--active .item-bg-class>.class-box-bottom {
+    animation-name: fade-in-bottom;
+}
+
+.glide-slide a.class-box-slash {
+    width: calc(1.2*var(--class-box-unit));
+    transform: rotate(0) rotateX(90deg);
+    transition: .4s ease-out;
+    transition-delay: .6s;
+}
+
+.glide-slide-box:hover a.class-box-slash,
+.glide__slide--active a.class-box-slash {
+    transform: rotate(-45deg) rotateX(0);
+} */
+
+.list__grid__item:hover .article-card__background__cover,
+.glide__slide--active .article-card__background__cover {
+    animation-name: swing-in-right-fwd;
+    animation-duration: .4s;
+}
+
+.list__grid__item:hover .article-card__content::before,
+.glide__slide--active .article-card__content::before {
+    animation-name: slide-in-left;
+    animation-duration: .2s;
+    animation-delay: .4s;
+}
+
+.list__grid__item:hover .article-card__content__codename__text,
+.glide__slide--active .article-card__content__codename__text,
+.list__grid__item:hover .article-card__content__rubi__text,
+.glide__slide--active .article-card__content__rubi__text {
+    animation-name: slide-in-top;
+    animation-duration: .2s;
+}
+
+.list__grid__item:hover .article-card__content__codename__text {
+    animation-delay: .7s;
+}
+
+.list__grid__item:hover .article-card__content__rubi__text {
+    animation-delay: .8s;
+}
+
+
+.list__grid__item:hover .article-card__content__emblem {
+    /* animation-name: fade-in-top; */
+    animation-name: puff-in-center;
+    animation-duration: .3s;
+    animation-delay: 1s;
+}
+
+.list__grid__item:hover .article-card__thumb__img,
+.glide__slide--active .article-card__thumb__img {
+    animation-name: slide-in-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+/* .list__grid__item.on .article-card__footer, */
+.list__grid__item:hover .article-card__footer,
+.glide__slide--active .article-card__footer {
+    animation-name: flip-in-ver-right;
+    animation-duration: .2s;
+    animation-delay: .6s;
+}
+
+.list__grid__item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-fill-mode: forwards;
+    border-radius: inherit;
+}
+
+.list__grid__item:hover::after {
+    background-color: var(--background-light);
+    animation-name: ping;
+}
+
+.glide__slide--active:hover .article-card__thumb__img {
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+/* Pair page animation */
+.list__grid--pair__item {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.list__grid__item__full.on .list__grid--pair__item {
+    animation-name: fade-in-top;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.list__grid__item__full.on .list__grid--pair__item:nth-child(1) {
+    animation-name: slide-in-right;
+}
+
+.list__grid__item__full.on .list__grid--pair__item:nth-child(5) {
+    animation-name: slide-in-left;
+}
+
+.list__grid--pair__item:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.list__grid--pair__item:nth-child(2) {
+    animation-delay: 0.0s;
+}
+
+.list__grid--pair__item:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.list__grid--pair__item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.list__grid--pair__item:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.list__grid--pair__item:nth-child(2) .article-card__content__emblem {
+    animation-name: puff-in-center;
+    animation-duration: .3s;
+    animation-delay: 1s;
+}
+
+.list__grid--pair__item:nth-child(4) .article-card__content__emblem {
+    animation-name: puff-in-center;
+    animation-duration: .3s;
+    animation-delay: 1.4s;
+}
+
+.list__grid--pair__item:nth-child(4) .list__grid__item.circle:hover .article-card__content__emblem {
+    animation-delay: 1s;
+}

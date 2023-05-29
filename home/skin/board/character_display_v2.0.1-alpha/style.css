@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+/* CSS를 커스텀하여 사용할 경우 이 파일을 수정하여 사용합니다. */
+
+/* Avocado edition : personal */
+/** Category List **/
+#navi_category	{ text-align: center; padding: 20px 0; }
+#navi_category li	{ display: inline-block; padding: 0 20px; }

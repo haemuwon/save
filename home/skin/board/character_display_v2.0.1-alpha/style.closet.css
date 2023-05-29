@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+.article-closet {
+    --thumb-w: 64px;
+    --active-w: 8px;
+    --stroke-w: 1px;
+    --closet-padding: 8px;
+}
+
+/* Closet Area */
+.article-closet {
+    display: flex;
+    pointer-events: visible;
+}
+
+/* .article-closet::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 3px;
+    background: var(--foreground-color);
+    margin-left: var(--gutter);
+} */
+
+.article-closet__display {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--col-2);
+    height: 80vh;
+    background: linear-gradient(-90deg, var(--background-color), transparent);
+}
+
+/* .article-closet .glide-track {
+    height: auto;
+    overflow: hidden;
+} */
+
+.article-closet__list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.article-closet__list__item {
+    height: 100%;
+}
+
+.article-cloth {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: var(--closet-padding);
+}
+
+.article-cloth__thumb {
+    width: var(--thumb-w);
+    height: var(--thumb-w);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 4px var(--foreground-600);
+}
+
+.article-cloth__thumb::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: -9;
+    height: 200%;
+    width: 200%;
+    transform: rotate(-45deg);
+    overflow: hidden;
+}
+
+.article-cloth__thumb__img {
+    background-color: var(--background-color-c);
+    width: calc(100% - 2*var(--stroke-w));
+    height: calc(100% - 2*var(--stroke-w));
+    margin: var(--stroke-w);
+    background-position: center 25%;
+    background-size: 800%;
+}
+
+.article-cloth__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 0;
+    height: var(--thumb-w);
+}
+
+.article-cloth__caption,
+.article-cloth__name,
+.article-cloth__control {
+    margin-right: 16px;
+}
+
+.article-cloth__caption {
+    background-color: var(--background-color);
+    font-size: var(--font-xxs);
+    font-weight: 600;
+    line-height: var(--font-xxs);
+    letter-spacing: -.05em;
+    padding: 2px 4px;
+}
+
+.article-cloth__caption.ch-txt-point {
+    background-color: var(--ch-forecolor);
+}
+
+.article-cloth__name {
+    font-size: var(--font-s);
+    font-weight: 400;
+}
+
+.article-cloth__control {
+    display: flex;
+}
+
+.article-cloth__control__btn {
+    font-size: var(--font-xs);
+    word-break: keep-all;
+    white-space: nowrap;
+    padding: 2px 8px;
+    margin-left: 4px;
+    /* Styling */
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+}
+
+/* hover effect */
+.article-closet__list__item:hover {
+    background: linear-gradient(90deg, transparent, var(--gradient-light), var(--background-color-c) 70%), linear-gradient(90deg, transparent, var(--foreground-600) 60%);
+    box-shadow: 8px 0 8px var(--foreground-200);
+}
+
+.article-cloth__caption,
+.article-cloth__name,
+.article-cloth__control {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.article-closet__list__item:hover .article-cloth__content {
+    width: calc(var(--thumb-w)*3);
+    transition: .2s ease-out;
+}
+
+.article-closet__list__item:hover .article-cloth__caption,
+.article-closet__list__item:hover .article-cloth__name,
+.article-closet__list__item:hover .article-cloth__control {
+    animation-duration: .4s;
+    animation-name: slide-in-left;
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.article-cloth__caption,
+.article-cloth__name {
+    animation-delay: 0;
+}
+
+.article-cloth__control {
+    animation-delay: .1s;
+}

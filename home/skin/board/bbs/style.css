@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+.board-notice	{ width: 264px; padding: 10px; margin: 0 auto; text-align: center; box-sizing: border-box; }
+
+
+.avocado-list	{
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.avocado-list li	{
+	display: block;
+	position: relative; 
+	padding: 5px 0; 
+	margin-bottom:1px;
+} 
+.avocado-list li.bo_notice	{  }
+.avocado-list li.no-data	{ 
+	text-align: center;
+	line-height: 200px;
+}
+.avocado-list li .td_chk { position:absolute; padding-left:5px;line-height: 35px;z-index:10;}
+.avocado-list li a	{
+	display: block;
+	position: relative;
+	padding: 0px 200px 0px 120px;
+	line-height: 35px;
+}
+.avocado-list li strong	{
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.avocado-list li strong .highlight {font-weight:normal;}
+.avocado-list li strong .cnt_cmt:before	{ content: "( "; }
+.avocado-list li strong .cnt_cmt:after	{ content: " )"; }
+
+.avocado-list li .ico-cate	{
+	display: block;
+	position: absolute;
+	top: 0; 
+	left: 20px;
+	width: 100px;
+	text-align: center;
+}
+.avocado-list li .name	{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 100px;
+	width: 100px;
+	text-align: center;
+	opacity: .6;
+	font-size: 11px;
+}
+.avocado-list li .date	{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100px;
+	text-align: center;
+	opacity: .6;
+	font-size: 11px;
+}
+.avocado-list li .hit	{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	text-align: center;
+	opacity: .6;
+	font-size: 11px;
+}
+
+
+
+.bo_fx {position:relative;padding:20px 0;}
+.bo_fx .chk_all{ position:absolute;left:5px;top:20px;}
+
+
+
+.board-category	{
+	display: block;
+	position: relative;
+	margin-bottom: 10px; 
+	
+}
+.board-category select	{
+
+}
+
+@media all and (max-width: 640px) {
+#bo_v_con * {max-width:100%;}
+
+	.board-category	{
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 10px;
+	}
+	.board-category select	{
+		width: 100%;
+	}
+
+	.bo_fx	{
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 20px 10px !important;
+	}
+	.bo_fx a	{
+		display: block;
+		width: 100%;
+	}
+}
+
+
+
+.board-write	{  padding: 0 10px; }
+
+.board-write h3	{
+	font-size: 26px;
+	text-align: center;
+	padding: 30px 0 20px;
+} 
+.board-write .write-notice	{
+	padding: 10px;
+	font-size: 11px;
+}
+.board-write > dl {position:relative;}
+.board-write > dl > dt { width:70px;position:absolute;line-height:32px;text-align:center; }
+.board-write > dl > dd { width:100%;margin-left:0;padding-left:80px;box-sizing:border-box;line-height:32px;}
+.board-write input.frm_input.full	{ width: 100%; display:block;margin:1px 0;}
+
+
+
+
+.board-viewer.theme-box	{
+	display: block;
+	position: relative;
+	padding: 20px;
+}
+
+.board-viewer .subject	{
+	text-align: center;
+}
+.board-viewer .subject em	{
+	display: block;
+	position: relative;
+	font-size: 14px;
+	line-height: 1.2em;
+	padding-bottom: 10px;
+}
+.board-viewer .subject strong	{
+	display: block;
+	position: relative;
+	font-size: 22px;
+	line-height: 1.2em;
+}
+
+.board-viewer .info	{
+	margin-top: 20px;
+	padding: 8px 10px;
+	text-align: center;
+}
+.board-viewer .info span	{ display: inline-block; opacity: .8; }
+.board-viewer .info span + span:before	{
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 8px;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.board-viewer .contents	{
+	display: block;
+	position: relative;
+	margin: 20px 0;
+	padding: 40px 15px;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+
+
+
+
+
+#bo_v_bot	{ padding: 20px 0; overflow: hidden; }
+.bo_v_nb	{ float: left; }
+.bo_v_com	{ float: right; }
+
+
+.board-comment-list			{ position: relative; }
+.board-comment-list .co-line	{
+	display: block;
+	position: relative;
+	clear: both;
+	width: 100%;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.board-comment-list .item	{
+	position: relative;
+	padding: 10px 10px 10px 100px;
+}
+.board-comment-list .co-name	{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	bottom: 0;
+	width: 90px;
+	padding: 10px 10px;
+	box-sizing: border-box;
+}
+.board-comment-list .co-info {
+	display: block;
+	text-align: right;
+	padding-top: 15px;
+	font-size: 11px;
+	opacity: .7;
+}
+.board-comment-list .co-info span	{ display: inline-block; opacity: .8; }
+.board-comment-list .co-info span + span:before	{
+	content: "";
+	display: inline-block;
+	width: 1px;
+	height: 8px;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+
+.board-comment-list .item.reply	{ border-left: 5px solid rgba(255, 255, 255, .1); }
+.board-comment-list .item.reply .co-name	{
+	background: none;
+}
+
+
+.board-comment-list + .board-comment-write	{
+	margin-top: 20px;
+}
+
+.board-comment-form	{ 
+	position: relative;
+	padding-right: 80px;
+}
+.board-comment-form .btn_confirm	{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 29px;
+	width: 80px;
+}
+.board-comment-form .btn_confirm .ui-btn	{
+	width: 100%;
+	height: 100%;
+}
+.board-comment-form p	{
+	margin: 0;
+	padding: 5px 10px;
+}
+.board-comment-form textarea	{ display: block; height: 100px; resize: none; border: none; }
+
+
+@media all and (max-width: 640px) {
+
+	.avocado-list li a	{
+		line-height: 1.2em;
+		padding: 15px 15px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.avocado-list li .ico-cate,
+	.avocado-list li .name,
+	.avocado-list li .date,
+	.avocado-list li .hit	{
+		position: relative;
+		width: auto;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		line-height: 1.2em;
+	}
+
+	.avocado-list li .info	{
+		display: block;
+		text-align: right;
+		line-height: 1.0em;
+		padding-top: 10px;
+	}
+
+	.avocado-list li .ico-cate	{ display: inline; }
+	.avocado-list li .ico-cate:before	{ content: "[ "; }
+	.avocado-list li .ico-cate:after	{ content: " ]"; }
+
+	.avocado-list li strong	{ display: inline; line-height: 1.2em; }
+
+	.avocado-list li .name,
+	.avocado-list li .date,
+	.avocado-list li .hit	{ display: inline; padding: 0 5px; }
+
+	.board-comment-list .item	{ padding: 0; }
+	.board-comment-list .co-name	{ position: relative; width: auto; padding: 5px 10px; }
+	.board-comment-list .co-content	{ padding: 10px; word-break:break-all;}
+
+}

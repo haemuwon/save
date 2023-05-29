@@ -1,0 +1,153 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+:root {
+--txt-color: #f3f3f3;
+--txt-font: 'PyeongChangPeace-Light';
+}
+
+/*텍스트*/
+.txt-sub {
+	text-align: center;
+	padding: 12px 48px;
+	color: var(--txt-color);
+	background: transparent;
+	font-weight: normal;
+	font-size: 16px;
+	font-family:  var(--txt-font);
+	text-decoration: none;
+   }
+
+
+
+textarea {display:block;}
+
+/* 본문 */
+#page_board_content	{ padding: 0 10px; }
+
+.board-notice	{ max-width: 430px; padding: 20px; margin: 0 auto; text-align: center;} /* 상단공지 */
+
+.clap_box button.clap	{height:40px;line-height:38px;} /* 박수! 버튼 */
+
+.ui-write-box { /* 메시지 남기기 영역 */
+	position:relative;
+	margin: 0 auto;padding-right:101px;
+	width: 90%;
+	box-sizing:border-box;
+	overflow: hidden;
+}
+.ui-write-box textarea { /* 메시지 남기기 텍스트박스 */
+	width: 100%; height: 100px; 
+	padding: 10px; 
+	box-sizing: border-box;
+}
+.ui-write-box #btn_submit { /* 메시지 남기기 버튼 */
+	padding:30px 0;position:absolute;right:0;top:0;
+	width:100px;height:100px;line-height:20px;
+	}
+	
+.ui-control { padding-top: 5px; overflow: hidden; text-align: right; } 
+.ui-control .files {position:relative;display:block;margin:5px 0;}
+.ui-control .files dt {width:100px;flex-shrink:0;}
+.ui-control .files dd {margin:0;width:100%;}
+
+.ui-qna-list		{ position: relative; clear: both; } /* 메시지 리스트 전체 영역 */
+.ui-qna-list li		{ position: relative; padding: 15px 0; } /* 각 메시지 영역 */
+.ui-qna-list li p	{ clear: both; margin: 0 0 10px; line-height: 1.5em;}
+.ui-qna-list li p.txt-center {padding:20px 0 10px;}
+.ui-qna-list li p.notice		{margin:0;}
+.ui-qna-list li p.notice strong	{position:absolute;top:10px;right:15px;}
+.ui-qna-list li p strong a		{ 
+	display: block; padding: 2px 5px; margin-right:5px; float: right;
+	font-size:9px; font-family: 'dotum', sans-serif;font-weight: normal;
+}
+
+.ui-qna-list li .ui-btn.small {
+	margin-top:5px;margin-left:8px;padding:0 6px;
+	height:20px;line-height:18px;
+	font-size:11px; font-family:'dotum',sans-serif;
+	border-radius:2px;opacity:0.8;
+}
+.ui-qna-list li .qna-content.guest {opacity:0;}
+.ui-qna-list li .qna-content { margin:0 15px 5px; }
+.ui-qna-list li .qna-content a { word-break:break-all; } 
+.ui-qna-list li .qna-comment-content { position:relative;padding:5px 15px; }
+.ui-qna-list li .qna-comment-content p {padding:0;margin:0;}
+
+.ui-qna-list li ul li			{ padding: 0; }
+.ui-qna-list li ul li .clear	{text-align:right;}
+.ui-qna-list li ul li .clear a	{display:inline-block;float:none;}
+
+.ui-qna-list li div.ui-write-area { padding:5px 0 0; margin-bottom: 10px;}
+.ui-qna-list li div.ui-write-area button { white-space:nowrap; height: 28px; line-height: 28px; padding: 0 25px; margin-top: 10px; }
+
+.ui-qna-list .ui-qna-list-password label		{ padding-right: 10px; }
+.ui-qna-list .ui-qna-list-password label.blur	{ text-shadow: none; }
+.ui-qna-list .ui-qna-list-password input		{ position: relative; z-index: 1; }
+.ui-qna-list .ui-qna-list-password button		{ 
+	height: 28px; line-height: 28px; padding: 0 25px;
+	font-family: 'Dotum'; margin-left: -5px; border-left-width: 0;
+}
+
+.ui-qna-list .no-data			{ text-align: center; line-height: 100px; }
+
+.search-box			{ clear: both; float: right; margin-bottom: 10px; }
+
+ 
+/*통계 섹션*/
+#clap_wrap {display:none;max-height:340px;overflow-y:auto;}
+/* #clap_wrap::-webkit-scrollbar{display:none;} */
+#stat_total {text-align:center;padding: 10px 0; font-size:13px;margin-bottom:0;}
+.clap_container {display:flex;flex-wrap:wrap;justify-content:space-evenly;}
+.clap_container section {display:flex; flex-direction: column;justify-content: space-between;margin:10px 0;}
+#clap_wrap .clap_stat_daily {width:300px;}
+#clap_wrap .clap_stat_weekly {width:65%;}
+
+#clap_wrap h3 {margin-bottom:5px;padding:8px 0;background:rgba(100,100,100,0.1);}
+#clap_wrap h3 .less {display:none;}
+#clap_wrap table {width:100%; margin:0 auto;} 
+
+#clap_wrap table td {
+	position:relative;padding:0 0 18px;height:140px;
+	vertical-align:bottom; text-align:center; line-height:1;
+	font-family:'dotum',sans-serif;font-size:11px;
+	box-sizing:border-box;border-bottom:1px solid rgba(100,100,100,0.1);
+} 
+#clap_wrap .clap_stat_weekly table td {height:280px;} 
+
+#clap_wrap table td p {line-height:18px; display:block; padding:0;margin:0 auto;}
+#clap_wrap table td .bar {width:12px;cursor:pointer; background:#ffffffd3;}
+#clap_wrap table td .bar i { 
+	display:none; 
+	position:absolute;bottom:30%;
+	white-space:nowrap;
+	transform:translateX(-50%);
+	opacity:1;
+}
+#clap_wrap table td .bar:hover i { display:block; }
+#clap_wrap table td .num {position:absolute;bottom:0;left:0;right:0;height:18px;}
+@media all and (max-width: 800px) {
+	#clap_wrap .clap_stat_weekly {width:100%;}
+}
+@media all and (max-width: 480px) {
+	.ui-control input[type="text"],
+	.ui-control input[type="password"]	{ display: block; clear: both; width: 100%; margin-top: 10px; }
+	.ui-qna-list li	{ padding: 10px 0; }
+	#clap_wrap table td.old {width:0;overflow:hidden;}
+	#clap_wrap h3 .less {display:inline;}
+	#clap_wrap h3 .full, #clap_wrap table td .num .year {display:none;}
+}
+
+@media all and (max-width: 380px) {
+	.ui-qna-list .ui-qna-list-password		{ position: relative; padding-right: 90px; }
+	.ui-qna-list .ui-qna-list-password label	{ display: none; } 
+	.ui-qna-list .ui-qna-list-password .ui-submit	{ position: absolute; top: 0; right: 0; width: 90px; }
+	.ui-qna-list .ui-qna-list-password input		{ width: 100%; }
+}
+
+
+    

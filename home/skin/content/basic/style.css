@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/* 내용관리 */
+.ctt_admin {position: absolute; top: 10px; right: 10px; }
+.co_container.theme-box {padding:50px;}
+.co_container h2{font-size:20pt;padding:50px 0;line-height:150%;}
+.co_container .co_content { word-break:keep-all;}
+
+.sound_only.not {display:block;}
