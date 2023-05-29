@@ -7,6 +7,8 @@ $category_option = get_category_option($bo_table, $sca);
 ?>
 <div <?if($board['bo_table_width']>0){?>style="max-width:<?=$board['bo_table_width']?><?=$board['bo_table_width']>100 ? "px":"%"?>;margin:0 auto;"<?}?>>
 <hr class="padding">
+<hr class="padding">
+<hr class="padding">
 <? if($board['bo_content_head']) { ?>
 	<div class="board-notice">
 		<?=stripslashes($board['bo_content_head']);?>

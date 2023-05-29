@@ -247,9 +247,9 @@ a,
 	<? } if($css['background'][3]) { ?>
 		background-position: <?=$css['background'][3]?>;
 	<? } if($css['background'][4]) { ?>
-		background-size: <?=$css['background'][4]?>;
+		background-size: cover;
 	<? } if($css['background'][5]) { ?>
-		background-attachment: <?=$css['background'][5]?>;
+		background-attachment: fixed;
 	<? } ?>
 	}
 }
@@ -267,9 +267,9 @@ a,
 	<? } if($css['m_background'][3]) { ?>
 		background-position: <?=$css['m_background'][3]?>;
 	<? } if($css['m_background'][4]) { ?>
-		background-size: <?=$css['m_background'][4]?>;
+		background-size: cover;
 	<? } if($css['m_background'][5]) { ?>
-		background-attachment: <?=$css['m_background'][5]?>;
+		background-attachment: fixed;
 	<? } ?>
 	}
 

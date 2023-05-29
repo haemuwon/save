@@ -42,7 +42,7 @@ if($action == "play") {
           events: {
           'onReady': function (event) {
             // 이 부분 재생목록 ID 수정하기 (1)
-          event.target.cuePlaylist({list: "PLG6YRH6TY7A4Xcaawqlya9KL_3YA2KuDB"});
+          event.target.cuePlaylist({list: "PLqf3eSXOEtOeK3srT8FaosQWzdNjbvufP"});
           event.target.playVideo();
           event.target.setLoop(true);
           setTimeout(function() {
@@ -60,37 +60,30 @@ if($action == "play") {
       var player = event.target;
         // 이 부분 재생목록 ID 수정하기 (2)
         // 아보카도 관리자의 재생목록 ID까지 수정해줘야 정상출력됩니다!
-		  loadPlaylist_playlist_id('PLG6YRH6TY7A4Xcaawqlya9KL_3YA2KuDB');
+		  loadPlaylist_playlist_id('PLqf3eSXOEtOeK3srT8FaosQWzdNjbvufP');
       }
 
 
       function songinfo(id) {
 
         //곡 목록
-  if (id == '2r04lB2vNn0') {
-    songtitle = 'Life will change';
-    songimg = 'https://sm.ign.com/ign_kr/review/p/persona-5-/persona-5-royal-review_xxkr.jpg';
-      pointcolor = '#8A0909';
+  if (id == '0DcVKhGtJJ0') {
+    songtitle = 'Le Bal de minuit';
+    songimg = '';
+      pointcolor = 'rgb(255, 198, 29)';
       textcolor = '#ffffff';
       backcolor = '';
       backgroundPos = '0% 20%';
   }
-  if (id == 'dUQ3XrJtjTw') {
-    songtitle = '이방인';
+  if (id == 'w70AjVHWNUM') {
+    songtitle = 'Eternity';
     songimg = '';
-      pointcolor = '#FFBE01'
+      pointcolor = 'rgb(243 162 188)'
       textcolor = '#ffffff';
       backcolor = '';
       backgroundPos = '50% 50%';
   }
-  if (id == 'NzUsOrEq8b4') {
-    songtitle = 'DANCE DANCE DA DA';
-    songimg = '';
-      pointcolor = '#D8CEF6';
-      textcolor = '#0B0B3B';
-      backcolor = '';
-      backgroundPos = '';
-  }
+
       //곡 목록 끝
 
     

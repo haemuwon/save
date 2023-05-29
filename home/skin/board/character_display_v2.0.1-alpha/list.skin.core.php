@@ -47,6 +47,10 @@ $is_bitmap = substr($board_skin_theme, strlen($board_skin_theme)-6, 6) == "bitma
 }
 </style>
 
+<hr class="padding">
+<hr class="padding">
+<hr class="padding">
+<hr class="padding">
 <div class="list__body">
 	<ul class="list__grid character-card-list content-grid">
 		<?

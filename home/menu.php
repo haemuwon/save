@@ -46,15 +46,16 @@ $tab_width = 1000; ?>
 <a href="https://eternally.ivyro.net/home/bbs/board.php?bo_table=board"><li class="mini-item"><i class="fa-solid fa-paragraph" style="font-size:23px; padding:5px 8px 5px 5px;"></i></i><div class="menu-txt"> BOARD</div></li></a>
 <div class=menu-line></div>
 <?if ($is_member){?>
-<?if($is_admin){?>
-	<a href="<?=G5_ADMIN_URL?>" target="_blank"><li class="mini-item"><i class="material-icons mini-icon">settings</i><div class="menu-txt">관리자</div></li></a><?}if($is_member && !$is_admin){?>
-		<a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info"><li class="mini-item"><i class="material-icons mini-icon">construction</i><div class="menu-txt">정보수정</div></li></a><?}?>
+  <a href="#"><li class="mini-item"><i class="fa-solid fa-quote-left" style="font-size:20px; padding:3px 6px 6px 9px;"></i><div class="menu-txt" ><b><?=$member['mb_name']?></b> 님</div></li></a>
+  <?if($is_admin){?>
+      <a href="<?=G5_ADMIN_URL?>" target="_blank"><li class="mini-item"><i class="material-icons mini-icon">settings</i><div class="menu-txt">관리자</div></li></a><?}
+        if($is_member && !$is_admin){?>
+          <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=register_form.php" id="ol_after_info"><li class="mini-item"><i class="material-icons mini-icon">construction</i><div class="menu-txt">정보수정</div></li></a><?}?>
 		<a href="<?php echo G5_BBS_URL ?>/logout.php" id="ol_after_logout"><li class="mini-item"><i class="material-icons mini-icon"><span class="material-icons-outlined">power_settings_new</i><div class="menu-txt">로그아웃</div></li></a><?}else{?>
 		<a href="<?=G5_BBS_URL?>/login.php"><li class="mini-item"><i class="material-icons mini-icon"><span class="material-icons-outlined">power_settings_new</i><div class="menu-txt">로그인</div></li></a>
 			<?if($config['cf_1']){?>
 				<a href="<?php echo G5_BBS_URL ?>/register.php"><li class="mini-item"><i class="material-icons mini-icon">how_to_reg</i><div class="menu-txt">회원가입</div></li></a><?}?>
 				<?}?>
-				
         <!--
 				<li class="mini-item"><a href="<?=G5_URL?>/bgm.php?action=play" target="bgm_frame" class="play playy music_btn" onclick="return fn_control_bgm('play')">
 			</a><div class="menu-txt onoff play2"></div></li>
@@ -82,12 +83,19 @@ function fn_control_bgm(state) {
 }
 bgm_effect = setInterval(set_equalizer, 300);
 </script> -->
+
+
 </div>
+
+
+
 			
 			<? /**************************************************************
 			----------------------------메뉴 영역 끝----------------------------
 			**************************************************************/ }?> 
 		</div>
+
+    
 
 
 
